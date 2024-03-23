@@ -32,9 +32,9 @@ namespace GOF.Prototype
         public MachinePart Clone(bool memberwise)
         {
             if (memberwise) { return this.MemberwiseClone() as MachinePart; }
-            
+
             MachinePart[] newParts = new MachinePart[NeighbourParts.Count];
-            for (int i = 0; i < newParts.Length; i++) { newParts[i] = NeighbourParts[i].Clone(); }
+            for (int i = 0; i < newParts.Length; i++) { newParts[i] = NeighbourParts[i].Clone(memberwise); }
             return new(ID, Name, Weight, newParts);
         }
     }
