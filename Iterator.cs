@@ -36,7 +36,7 @@ namespace GOF.Iterator
             while (current != null)
             {
                 yield return current;
-                current = current.Next;
+                current = current.Next!;
             }
             
         }
