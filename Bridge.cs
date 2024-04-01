@@ -1,10 +1,15 @@
+using System.Diagnostics.CodeAnalysis;
+
 public class UIDrawer
 {
     public enum OS { MacOS, WinOS, LinuxOS }
     private OSImplementator osImplementator;
 
+    
     public UIDrawer(OS os) => SetOSImplementator(os);
 
+
+    [MemberNotNull(nameof(osImplementator))]
     public void SetOSImplementator(OS os) => osImplementator = os switch
         {
             OS.WinOS => new WindowsImp(),
