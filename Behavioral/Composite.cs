@@ -1,4 +1,4 @@
-namespace GOF
+namespace GOF.Composite
 {
     public class CompositeGOF
     {
